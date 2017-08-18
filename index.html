@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body style="background:#000;">
+<style>
+	.parallax-viewport {
+    position: relative;     /* relative, absolute, fixed */
+    overflow: hidden;
+      width: 600px;
+      height: 300px;
+      background-color: #aebcc9;
+	  margin:40px auto;
+	  border-radius:10px;
+	  border:2px solid #333;
+}
+.parallax-layer {
+    position: absolute;
+	box-shadow:#000 0px 0px 60px inset;
+	cursor:none;
+}
+	</style>
+    
+<div class="parallax-viewport" id="parallax">
+        
+        <!-- parallax layers -->
+<div class="parallax-layer" style="width:2256px; height:330px;left:0px; top:0px; background:url(images/nairobi/world.jpg) no-repeat bottom left;"></div><div class="parallax-layer" style="width:1056px; height:340px; background:url(images/nairobi/moon.png) no-repeat top right;"></div>
+<div class="parallax-layer" style="width:1000px; height:420px; background:url(images/nairobi/sun.png) no-repeat 100px 120px;"></div>
+<div class="parallax-layer" style="width:856px; height:305px;left:0px; top:0px; background:url(images/nairobi/city.png) no-repeat bottom left;"></div>
+<div class="parallax-layer" style="width:1556px; height:300px;left:0px; top:0px; background:url(images/nairobi/trees.png) no-repeat bottom left;"></div>
+<div style="background:#900; opacity:0.2; position:absolute; top:0; left:0; height:300px; width:600px;cursor:none;"></div>
+    </div>
+    <div style="margin:10px auto; width:600px; height:100px; background:#333 url(images/nairobi/nav-pad.png) no-repeat top left; cursor:url(images/nairobi/hand.cur) 34 34, auto; border-radius:50px; border:#333 solid 2px; box-shadow:#000 0px 0px 10px inset; overflow:hidden;" id="controller" ><div style="background:url(images/nairobi/pattern.png) repeat top left; width:100%; height:100%;"></div></div>
+    <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery.parallax.js"></script>
+  <script>
+  jQuery(document).ready(function(){
+    jQuery('#parallax .parallax-layer')
+    .parallax({
+      mouseport: jQuery('#controller')
+    });
+  });
+  </script>
+</body>
+</html>
